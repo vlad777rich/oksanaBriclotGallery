@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Oksana Briclot Gallery</title>
+
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">-->
+    <!--<link rel="stylesheet" href="css/styleMainPage.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/button.css">
+</head>
+
+<body>
+
+<!--<nav>-->
+    <!--<ul class="menu">-->
+        <!--<li><a href="/oksanaBriclot">Home</a></li>-->
+        <!--<li><a href="/aboutMe">About Me</a></li>-->
+        <!--<li><a href="/contacts">Contact</a></li>-->
+    <!--</ul>-->
+<!--</nav>-->
+
+<form method="POST" enctype="multipart/form-data" th:action="@{/regNewPeople}">
+    E description
+    <textarea rows="9" title="descriptionEN" id="descriptionEN" th:name="descriptionEn" style="width: 80%"></textarea>
+    <br>
+    <br>
+    G description
+    <textarea rows="9" title="descriptionDE" id="descriptionDE" th:name="descriptionDe" style="width: 80% "></textarea>
+    <br>
+    <br>
+    Photo`s Name:
+    <input title="name" type="text" id="name" th:name="name" required>
+    <br>
+    <br>
+    File to upload: <input type="file" name="file" required>
+    <br>
+    <br>
+    <input class="butt" type="submit" value="Upload"> Press here to upload the file!
+</form>
+<br>
+<br>
+<form name="returnAdminPage" th:action="@{/adminPage}" th:method="post">
+    <input class="butt" type="submit" value="Return">
+</form>
+</body>
+<script type="text/javascript"
+        src="webjars/bootstrap/3.3.7/js/bootstrap.min.js">
+</script>
+</html>

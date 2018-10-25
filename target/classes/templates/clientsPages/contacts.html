@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.thymeleaf.org/ ">
+<head>
+    <meta charset="UTF-8">
+    <title>Oksana Briclot Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/styleMainPage.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+    <div class="logo" align="center">
+        <a class="tooltip" href="/oksanaBriclot">
+            <img src="/img/OB_logo2.png" width="20%" height="auto"></a>
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="/oksanaBriclot">HOME</a></li>
+            <li><a href="/myGallery">GALLERY</a></li>
+            <li><a href="/aboutMe">ABOUT ME</a></li>
+            <li><a href="/contacts">CONTACTS</a></li>
+        </ul>
+    </nav>
+    <div class="content" align="center">
+        <div th:each="contact : ${contacts}">
+            <a th:text="${contact}"></a>
+        </div>
+    </div>
+    <!--Bottom-->
+    <div class="footer">
+        <div class="instagram" align="center">
+            People
+            <a href="https://www.instagram.com/briclotfoto/">
+                <img src="css/images/icons_2.jpg" width="3%" height="auto" title="briclotfoto"></a>
+            Food
+            <a href="https://www.instagram.com/food_and_artichokes/">
+                <img src="css/images/icons_2.jpg" width="3%" height="auto" title="food_and_artichokes"></a>
+        </div>
+        <br>
+        <div align="center">
+            © Oksana Briclot, 2018
+        </div>
+        <br>
+        <div align="center">
+            <a href="/impressum">Impressum</a>-<a href="/datenschutz">Datenschutz</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

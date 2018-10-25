@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="css/button.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Oksana Briclot Gallery</title>
+</head>
+
+<body bgcolor="#c7b39b">
+<h1>Hello, Oks</h1>
+<div>
+    <form title="addNewStory" th:action="@{/addNewPeople}" method="post">
+        <input class="butt" title="addNewStory" type="submit" value="Add new People Photo">
+    </form>
+</div>
+<br>
+<br>
+<div>
+    <form title="addNewStory" th:action="@{/addNewFood}" method="post">
+        <input class="butt" title="addNewStory" type="submit" value="Add new Food Photo">
+    </form>
+</div>
+<br>
+<br>
+<div>
+    <form title="listOfStories" th:action="@{/listOfTails}" method="post">
+        <input class="butt" title="listOfStories" type="submit" value="List of Stories">
+    </form>
+</div>
+<br>
+<br>
+<div>
+    <form title="mainPage" th:action="@{/mainPageGallery}" method="post">
+        <input class="butt" title="mainPage" type="submit" value="Main Page">
+    </form>
+</div>
+<br>
+<br>
+    <!--<form th:action="@{/infoAboutMe}" method="post">-->
+    <!--<input class="butt" type="submit" value="Add info About Me"/>-->
+    <!--</form>-->
+<!--<br>-->
+<!--<br>-->
+<form th:action="@{/contactsAdmin}" method="post">
+    <input class="butt" type="submit" value="Add my Contacts info"/>
+</form>
+<br>
+<br>
+<form th:action="@{/logout}" method="post">
+    <input class="buttRed" type="submit" value="Sign Out"/>
+</form>
+<br>
+<br>
+<form th:action="@{/deleteAll}" method="post">
+    <input class="butt" type="submit" value="DELETE ALL"/>
+</form>
+<br>
+<br>
+<form th:action="@{/impressumAdmin}" method="post">
+    <input class="butt" type="submit" value="Add Impressum"/>
+</form>
+
+</body>
+</html>

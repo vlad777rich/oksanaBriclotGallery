@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="css/button.css">
+<head>
+    <title>Oksana Briclot Gallery</title>
+    <meta http-equiv="Content-Type" content="text/html charset=utf-8">
+
+    <link rel="stylesheet" type="text/css"
+          href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" th:href="@{/css/loginForm.css}"
+          href="../../static/css/loginForm.css"/>
+</head>
+<body>
+<div id="loginFormDiv">
+    <form th:action="@{/adminPage}" method="post" id="loginForm">
+
+        <input class="butt" type="submit" value="To administrate site">
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Oksana Briclot Gallery</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/styleMainPage.css">
+
+</head>
+
+<body>
+<nav>
+    <ul class="menu">
+        <li><a href="/oksanaBriclot">Home</a></li>
+        <li><a href="/myContacts">About Me</a></li>
+        <li><a href="/contacts">Contact</a></li>
+    </ul>
+</nav>
+
+<table>
+    <tr th:each="tail : ${tails}">
+        <td>
+            Story NAME:
+            <a th:text="${tail.name}"></a>
+            <form method="POST" enctype="multipart/form-data" th:action="@{'/deleteStory/'+${tail.name}}">
+                <input type="submit" value="DELETE">
+            </form>
+            <br>
+            <div>
+                <a class="tooltip" style="padding-left: 11%">
+                    <img th:src="@{'img/photoOnSite/'+${tail.pathToFile}}" width="80%" height="auto"></a>
+            </div>
+            Path
+<div th:text="${tail.pathToFile}">
+</div>
+            <br>
+            <b>Description De:</b>
+            <div th:text="${tail.descriptionDe}"></div>
+            <br>
+            <b>Description En:</b>
+            <div th:text="${tail.descriptionEn}"></div>
+            <br>
+            <b>DateOfCreation:</b>
+            <div th:text="${tail.dateOfCreation}"></div>
+            <br>
+            <br>
+        </td>
+    </tr>
+
+</table>
+
+<form th:action="@{/adminPage}" method="post">
+    <input type="submit" value="Back">
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="css/button.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Oksana Briclot Gallery</title>
+</head>
+<body>
+<h1>Successful deleted</h1>
+<div>
+    <form title="listOfStories" th:action="@{/listOfTails}" method="post">
+        <input class="butt" title="listOfTails" type="submit" value=" To list of Tails">
+    </form>
+</div>
+<br>
+<br>
+<div>
+    <form title="addNewStory" th:action="@{/addNewPeople}" method="post">
+        <input class="butt" title="addNewStory" type="submit" value="Add new People Photo">
+    </form>
+</div>
+<br>
+<br>
+<div>
+    <form title="addNewStory" th:action="@{/addNewFood}" method="post">
+        <input class="butt" title="addNewStory" type="submit" value="Add new Food Photo">
+    </form>
+</div>
+</body>
+</html>
